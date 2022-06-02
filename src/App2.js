@@ -27,6 +27,15 @@ export default class App2 extends Component {
     return false;
   }
 
+  getSnapshotBeforeUpdate(prevProps,prevState){
+      console.log("getSnapshotBeforeUpdate",prevProps,prevState)
+      return 50;
+  }
+
+
+  componentDidUpdate(prevProps,prevState,snapshot){
+    console.log("componentDidUpdate",prevProps,prevState,snapshot)
+  }
 
 
   render() {
